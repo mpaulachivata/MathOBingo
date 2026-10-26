@@ -21,16 +21,15 @@
     .page{display:flex;width:100%;min-height:calc(100 * min(var(--vh,1vh),1vh));padding:clamp(12px,1.7vw,24px);background-image:radial-gradient(#c52e3515 1.5px,transparent 1.5px);background-size:25px 25px}
     .shell{position:relative;isolation:isolate;display:flex;flex:1;width:100%;min-height:0;padding:clamp(9px,1.3vw,17px);background:var(--red);border-radius:clamp(30px,4vw,65px);filter:drop-shadow(0 5px 0 #e8b5a9)}
     .shell:before{content:"";position:absolute;z-index:-1;inset:-8px;border-radius:inherit;background:radial-gradient(circle at 11px 11px,var(--red) 11px,transparent 12px) top left/22px 22px repeat;pointer-events:none}
-    .inner{position:relative;display:grid;grid-template-rows:auto minmax(0,1fr) auto auto;gap:clamp(12px,2vh,22px);width:100%;min-height:100%;padding:clamp(17px,2.3vw,32px);background-color:#f7f0e2;background-image:url("mm.png");background-repeat:repeat;background-position:center;background-size:900px auto;border-radius:clamp(23px,3vw,51px)}
+    .inner{position:relative;display:grid;grid-template-rows:auto minmax(0,1fr) auto auto auto;gap:clamp(12px,2vh,22px);width:100%;min-height:100%;padding:clamp(17px,2.3vw,32px);background-color:#f7f0e2;background-image:url("mm.png");background-repeat:repeat;background-position:center;background-size:900px auto;border-radius:clamp(23px,3vw,51px)}
     .inner:before{content:"";position:absolute;z-index:1;inset:6px;border:3px dashed #c97870;border-radius:inherit;pointer-events:none}
     .header,.game,.bottom-bar{position:relative;z-index:2;min-width:0}
-    .header{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:0 clamp(5px,1vw,15px)}
-    .badge{position:relative;isolation:isolate;display:grid;place-items:center;min-width:0;padding:clamp(7px,1.3vh,13px) clamp(17px,2.6vw,38px);background:var(--red);border-radius:999px;filter:drop-shadow(0 4px 0 #edbcb1)}
+    .header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:15px;padding:0 clamp(5px,1vw,15px)}
+    .badge{position:relative;isolation:isolate;display:grid;place-items:center;flex:0 1 clamp(300px,30vw,460px);max-width:100%;min-width:0;padding:clamp(7px,1.3vh,13px) clamp(17px,2.6vw,38px);background:var(--red);border-radius:999px;filter:drop-shadow(0 4px 0 #edbcb1)}
     .badge:before{content:"";position:absolute;z-index:-1;inset:-5px;border-radius:999px;background:radial-gradient(circle at 7px 7px,var(--red) 7px,transparent 8px) top left/14px 14px repeat;pointer-events:none}
-    .title{margin:0;color:#fff;font-weight:900;letter-spacing:-.045em;line-height:1.05;white-space:nowrap}
-    .letters{display:flex;gap:clamp(4px,.7vw,10px);flex:none}
-    .letter{display:grid;place-items:center;width:clamp(29px,3.4vw,47px);height:clamp(29px,3.4vw,47px);border:2px solid var(--red);border-radius:50%;background:var(--white);color:var(--deep);font-size:clamp(16px,2vw,24px);font-weight:900;box-shadow:0 3px 0 #f0c7bf}
-    .letter:nth-child(3){background:var(--red);color:#fff}
+    .title{max-width:100%;margin:0;color:#fff;font-size:clamp(18px,5vw,46px)!important;font-weight:900;letter-spacing:-.045em;line-height:1.05;text-align:center;white-space:normal;overflow-wrap:anywhere}
+    .header-bingo-controls{display:flex;flex:0 1 auto;flex-direction:column;align-items:flex-start;gap:8px;min-width:0}
+    .header-bingo-actions{display:flex;flex-wrap:wrap;gap:8px}
     .game{display:grid;grid-template-rows:auto auto;align-content:center;gap:clamp(12px,2vh,20px);width:100%;min-height:0}
     .question{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;width:100%;height:clamp(360px,48vh,500px);min-width:0;min-height:0;text-align:center;padding:clamp(18px,3vw,42px);border:3px solid var(--red);border-radius:clamp(25px,3vw,48px);background:var(--cream);box-shadow:inset 0 0 0 5px var(--white),0 5px 0 #f2c7be}
     .question:before,.question:after{content:"✦";position:absolute;color:var(--red);font-size:19px}
@@ -45,7 +44,7 @@
     .previous{display:flex;align-items:center;gap:13px;width:100%;height:clamp(120px,14vh,145px);min-width:0;min-height:0;flex:none;overflow:hidden;padding:clamp(13px,1.8vh,20px) clamp(16px,2vw,25px);border:2px solid #e8b3a8;border-radius:25px;background:var(--cream)}
     .previous>div{min-width:0;max-height:100%;overflow:hidden}.previous-icon{display:grid;place-items:center;width:39px;height:39px;flex:none;border-radius:50%;background:var(--red);color:#fff;font-size:24px;font-weight:900}
     .previous-title{margin:0 0 2px;color:var(--deep);font-weight:900}.previous-text{max-height:3.75em;margin:0;overflow-y:auto;font-size:clamp(14px,1.45vw,20px);font-weight:700;line-height:1.25;overflow-wrap:anywhere;overscroll-behavior:contain}
-    .bottom-bar{display:flex;align-items:center;justify-content:space-between;gap:clamp(20px,5vw,90px);padding:6px 7px 2px}
+    .bottom-bar{grid-row:4;display:flex;align-items:center;justify-content:space-between;gap:clamp(20px,5vw,90px);padding:6px 7px 2px}
     .controls{display:flex;align-items:center;flex-wrap:wrap;gap:9px;min-width:0}
     .action{min-height:42px;padding:8px clamp(12px,1.3vw,20px);border:2px solid var(--deep);border-radius:999px;font-weight:900;line-height:1.2;box-shadow:0 3px 0 #e9b3a8;transition:transform .16s,box-shadow .16s;white-space:normal}
     .action:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 5px 0 #e9b3a8}
@@ -53,7 +52,7 @@
     .restart-zone{flex:none;margin-left:auto;padding-left:clamp(18px,4vw,65px);border-left:2px dashed #e8b3a8}
     .restart{background:var(--deep);color:#fff;box-shadow:0 3px 0 #d5a19b}
     .restart.is-confirming{background:#fff0e9;color:var(--deep)}
-    .history-panel{position:relative;z-index:2;grid-row:4;left:auto;right:auto;bottom:auto;display:flex;flex-direction:column;gap:12px;height:auto;max-height:80vh;overflow-y:auto;min-height:0;padding:clamp(16px,2vw,25px);border:3px solid var(--red);border-radius:30px;background:var(--white);box-shadow:0 5px 0 #eab6aa}
+    .history-panel{position:relative;z-index:2;grid-row:5;left:auto;right:auto;bottom:auto;display:flex;flex-direction:column;gap:12px;height:auto;max-height:80vh;overflow-y:auto;min-height:0;padding:clamp(16px,2vw,25px);border:3px solid var(--red);border-radius:30px;background:var(--white);box-shadow:0 5px 0 #eab6aa}
     .history-head{display:flex;align-items:center;justify-content:space-between;gap:15px;flex:none}
     .history-title{margin:0;color:var(--deep);font-weight:900;line-height:1.15}
     .history-empty{margin:0;color:var(--deep)}
@@ -64,15 +63,15 @@
     th:first-child{width:66%}td{border-top:1px solid #f0c8c0}tbody tr:nth-child(even){background:#fff4ee}
     @media(max-width:780px){
       .page{padding:12px}.shell{min-height:0}.inner{min-height:100%;gap:14px}
-      .title{font-size:clamp(24px,5vw,38px)!important}.letters{gap:3px}.letter{width:clamp(23px,5vw,34px);height:clamp(23px,5vw,34px);font-size:clamp(13px,3vw,18px)}
+      .badge{flex:1 1 220px}
+      .bingo-player-setting{flex:1 1 250px;width:auto}
       .question-text{font-size:clamp(21px,5vw,34px)}
       .bottom-bar{align-items:stretch;flex-direction:column;gap:18px}.controls{justify-content:center}.restart-zone{align-self:flex-end;margin-left:0;padding:12px 0 0;border-left:0;border-top:2px dashed #e8b3a8}
       .history-panel{height:min(410px,67%)}.history-title{font-size:20px!important}
     }
     @media(max-width:430px){
       .page{padding:10px}.shell{padding:9px;border-radius:31px}.inner{padding:18px 15px;border-radius:25px;gap:12px}
-      .header{gap:8px}.badge{padding:8px 16px}.title{font-size:23px!important}
-      .letter{width:22px;height:22px;font-size:12px}
+      .header{gap:8px}.badge{padding:8px 16px}
       .game{grid-template-rows:auto auto}.question{height:clamp(340px,52vh,430px);padding:17px 13px}
       .timer-ring{width:62px;height:62px}.timer-area{margin-top:13px}
       .action{min-height:38px;padding:7px 11px;font-size:13px}
@@ -81,15 +80,17 @@
     }
     @media(max-height:650px) and (min-width:781px){
       .page{padding:10px}.shell{min-height:0}.inner{min-height:100%;padding:14px 22px;gap:9px}
-      .badge{padding:6px 24px}.title{font-size:34px!important}.game{grid-template-rows:minmax(145px,1fr) auto;gap:9px}.question{min-height:145px;padding:9px 20px}.question-text{font-size:clamp(20px,2.5vw,31px)}
+      .badge{padding:6px 24px}.game{grid-template-rows:minmax(145px,1fr) auto;gap:9px}.question{min-height:145px;padding:9px 20px}.question-text{font-size:clamp(20px,2.5vw,31px)}
       .progress{margin-bottom:3px}.timer-area{margin-top:6px}.timer-ring{width:58px;height:58px}.previous{padding:7px 13px}.action{min-height:34px;padding:5px 11px}
     }
-    .bingo-panel { overflow: hidden !important; }
-    .bingo-head, .bingo-summary { flex-shrink: 0 !important; position: relative !important; z-index: 10 !important; }
+    .bingo-panel{position:relative;z-index:2;grid-row:3;overflow:hidden!important;padding:clamp(13px,1.7vw,20px);border:2px solid #e9b2a8;border-radius:22px;background:var(--white)}
+    .bingo-title{margin:0 0 8px;color:var(--deep);font-weight:900;line-height:1.15}
+    .bingo-mode-toggle[aria-expanded="true"]{background:var(--red);color:#fff}
     .bingo-mode-controls{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 10px}
+    .bingo-summary{flex-shrink:0 !important;position:relative !important;z-index:10 !important;margin:0 0 10px}
     .bingo-mode-option{padding:7px 10px;border:2px solid var(--red);border-radius:999px;background:#fffaf7;color:var(--deep);font-weight:800;line-height:1.2}
     .bingo-mode-option.is-active{background:var(--red);color:#fff;box-shadow:0 3px 0 #e9b8b0}
-    .bingo-player-setting{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:4px 0 10px;color:var(--deep);font-weight:800}
+    .bingo-player-setting{display:flex;flex:0 1 clamp(250px,25vw,360px);flex-wrap:wrap;align-items:center;gap:8px 12px;width:clamp(250px,25vw,360px);max-width:100%;margin:0;padding:12px 15px;border:2px solid #e8b3a8;border-radius:22px;background:var(--cream);box-shadow:inset 0 0 0 3px var(--white),0 4px 0 #f2c7be;color:var(--deep);font-weight:900;line-height:1.25}
     .bingo-player-setting input{width:82px;padding:7px 9px;border:2px solid #e9b2a8;border-radius:10px;background:#fffaf7;color:var(--deep);font:inherit;font-weight:900}
     .bingo-player-setting input:focus-visible{outline:3px solid var(--deep);outline-offset:2px}
     .bingo-player-help{flex-basis:100%;font-size:13px;font-weight:700}
@@ -120,13 +121,23 @@
       <div data-template-id="title-plaque" class="canva-banner badge" style="background: rgb(197, 46, 53);">
        <h1 data-template-id="page-title" class="canva-text title" style="color: rgb(255, 255, 255); font-weight: 900; font-style: normal; font-size: 46px;">Math O-Bingo</h1>
       </div>
-      <div class="letters" aria-hidden="true"><span class="letter">B</span><span class="letter">I</span><span class="letter">N</span><span class="letter">G</span><span class="letter">O</span>
-      </div>
       <label class="bingo-player-setting" for="bingo-player-count">
        Jugadores / cartones entregados
        <input id="bingo-player-count" type="number" min="1" max="80" value="80" inputmode="numeric">
        <span id="bingo-player-help" class="bingo-player-help">Se cuentan los cartones del 1 al 80, en orden.</span>
       </label>
+      <div class="header-bingo-controls">
+       <div class="header-bingo-actions">
+        <button id="bingo-mode-toggle" class="action secondary bingo-mode-toggle" type="button" aria-expanded="false" aria-controls="bingo-mode-controls">Modalidad</button>
+        <button id="bingo-toggle" data-template-id="bingo-toggle" class="canva-button action secondary bingo-toggle" type="button" aria-expanded="false" aria-controls="bingo-panel">Ver ganadores</button>
+       </div>
+       <div id="bingo-mode-controls" class="bingo-mode-controls" role="group" aria-label="Seleccionar modalidad de bingo" hidden="">
+        <button class="bingo-mode-option is-active" type="button" data-mode="x" aria-pressed="true">1. Diagonales X</button>
+        <button class="bingo-mode-option" type="button" data-mode="square" aria-pressed="false">2. Cuadro 3x3</button>
+        <button class="bingo-mode-option" type="button" data-mode="row" aria-pressed="false">3. Una fila</button>
+        <button class="bingo-mode-option" type="button" data-mode="full" aria-pressed="false">4. Cartón completo</button>
+       </div>
+      </div>
      </header>
      <main class="game">
       <section data-template-id="question-card" class="canva-card question" aria-labelledby="current-heading" style="background: rgb(255, 246, 233);">
@@ -153,6 +164,11 @@
        </div>
       </section>
      </main>
+     <section id="bingo-panel" data-template-id="bingo-panel" class="canva-panel bingo-panel" aria-labelledby="bingo-heading" hidden="" style="background: rgb(255, 253, 250);">
+      <h2 id="bingo-heading" data-template-id="bingo-title" class="canva-text bingo-title" style="color: rgb(135, 33, 42); font-weight: 900; font-style: normal; font-size: 23px;">Cartones que van ganando</h2>
+      <p id="bingo-summary" class="bingo-summary">Aún no hay extracciones</p>
+      <div id="bingo-grid" class="bingo-grid"></div>
+     </section>
      <footer class="bottom-bar">
       <nav class="controls" aria-label="Controles del juego">
        <button id="start-timer" class="action primary" type="button"><span id="start-label" data-template-id="start-label" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 900; font-style: normal; font-size: 18px;">Iniciar</span><span id="pause-label" data-template-id="pause-label" class="canva-text" hidden="" style="color: rgb(255, 255, 255); font-weight: 900; font-style: normal; font-size: 18px;">Pausar</span></button> <button id="reset-timer" data-template-id="reset-timer-button" class="canva-button action secondary" type="button" style="background: rgb(255, 253, 250); color: rgb(135, 33, 42); font-weight: 900; font-style: normal; font-size: 18px;">Reiniciar tiempo</button> <button id="previous-question" data-template-id="previous-button" class="canva-button action secondary" type="button" style="background: rgb(255, 253, 250); color: rgb(135, 33, 42); font-weight: 900; font-style: normal; font-size: 18px;">← Anterior</button> <button id="next-question" data-template-id="next-button" class="canva-button action primary" type="button" style="background: rgb(197, 46, 53); color: rgb(255, 255, 255); font-weight: 900; font-style: normal; font-size: 18px;"><span id="next-label" data-template-id="next-label" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 900; font-style: normal; font-size: 18px;">Siguiente →</span></button> <button id="history-toggle" class="action secondary" type="button" aria-expanded="false" aria-controls="history-panel"><span id="show-history-label" data-template-id="show-history-label" class="canva-text" style="color: rgb(135, 33, 42); font-weight: 900; font-style: normal; font-size: 18px;">Ver historial</span><span id="hide-history-label" data-template-id="hide-history-label" class="canva-text" hidden="" style="color: rgb(135, 33, 42); font-weight: 900; font-style: normal; font-size: 18px;">Ocultar historial</span></button>
@@ -177,19 +193,6 @@
         <tbody id="history-body"></tbody>
        </table>
       </div>
-      <section data-template-id="bingo-panel" class="canva-panel bingo-panel" aria-labelledby="bingo-heading" style="background: rgb(255, 253, 250);">
-       <div class="bingo-head">
-        <h2 id="bingo-heading" data-template-id="bingo-title" class="canva-text bingo-title" style="color: rgb(135, 33, 42); font-weight: 900; font-style: normal; font-size: 23px;">Cartones que van ganando</h2><button id="bingo-toggle" data-template-id="bingo-toggle" class="canva-button action secondary bingo-toggle" type="button" aria-expanded="false" style="background: rgb(255, 253, 250); color: rgb(135, 33, 42); font-weight: 900; font-style: normal; font-size: 18px;">Mostrar todos</button>
-       </div>
-       <div id="bingo-mode-controls" class="bingo-mode-controls" aria-label="Modalidad de bingo">
-        <button class="bingo-mode-option is-active" type="button" data-mode="x" aria-pressed="true">1. Diagonales X</button>
-        <button class="bingo-mode-option" type="button" data-mode="square" aria-pressed="false">2. Cuadro 3x3</button>
-        <button class="bingo-mode-option" type="button" data-mode="row" aria-pressed="false">3. Una fila</button>
-        <button class="bingo-mode-option" type="button" data-mode="full" aria-pressed="false">4. Cartón completo</button>
-       </div>
-       <p id="bingo-summary" class="bingo-summary">Aún no hay extracciones</p>
-       <div id="bingo-grid" class="bingo-grid"></div>
-      </section>
      </aside>
     </div>
    </div>
@@ -2543,6 +2546,7 @@
               ? `${leaders.length === 1 ? "Cartón" : "Cartones"} ${leaders.map(card => card.number).join(", ")} va${leaders.length === 1 ? "" : "n"} ganando en ${bingoModeMeta[selectedMode].label.toLowerCase()}`
               : getModeNoProgressText(selectedMode))
           : "Aún no hay extracciones";
+        $("bingo-panel").hidden = !showAllBingo;
         $("bingo-summary").hidden = !showAllBingo;
         $("bingo-grid").hidden = !showAllBingo;
 
@@ -2631,6 +2635,9 @@
           ? gameFinished ? "Partida finalizada" : "Finalizar partida →"
           : "Siguiente →";
         resetTimer();
+        const newDraw = !visited.has(deck[current]);
+        visited.add(deck[current]);
+        return newDraw;
       }
       function renderHistory({ announce = false } = {}) {
         const entries = [...visited].filter(index => index !== deck[current]);
@@ -2658,18 +2665,16 @@
       function moveTo(index) {
         cancelRestart();
         if (index < 0 || index > deck.length || (gameFinished && index === deck.length)) return;
-        const newDraw = index > current && !visited.has(deck[current]);
-        if (index > current) visited.add(deck[current]);
         if (index === deck.length) {
           gameFinished = true;
           $("next-question").disabled = true;
           $("next-label").textContent = "Partida finalizada";
-          if (!$("history-panel").hidden) renderHistory({ announce: newDraw });
-          else renderBingo({ announce: newDraw });
+          if (!$("history-panel").hidden) renderHistory();
+          else renderBingo();
           return;
         }
         current = index;
-        renderQuestion();
+        const newDraw = renderQuestion();
         if (!$("history-panel").hidden) renderHistory({ announce: newDraw });
         else renderBingo({ announce: newDraw });
       }
@@ -2721,9 +2726,17 @@
       $("history-toggle").addEventListener("click", () => toggleHistory($("history-panel").hidden));
       $("history-hide").addEventListener("click", () => toggleHistory(false));
 
-      // ESTE ES EL BOTÓN REEMPLAZADO
-      $("bingo-toggle").addEventListener("click", () => { showAllBingo = !showAllBingo; $("bingo-toggle").setAttribute("aria-expanded", String(showAllBingo)); $("bingo-toggle").textContent = showAllBingo ? "Ocultar ganadores" : "Ver ganadores"; renderBingo(); });
-      $("bingo-toggle").textContent = "Ver ganadores";
+      $("bingo-mode-toggle").addEventListener("click", () => {
+        const open = $("bingo-mode-toggle").getAttribute("aria-expanded") !== "true";
+        $("bingo-mode-toggle").setAttribute("aria-expanded", String(open));
+        $("bingo-mode-controls").hidden = !open;
+      });
+      $("bingo-toggle").addEventListener("click", () => {
+        showAllBingo = !showAllBingo;
+        $("bingo-toggle").setAttribute("aria-expanded", String(showAllBingo));
+        $("bingo-toggle").textContent = showAllBingo ? "Ocultar ganadores" : "Ver ganadores";
+        renderBingo();
+      });
       $("bingo-player-count").addEventListener("change", () => {
         const max = bingoCards.length;
         const value = Number.parseInt($("bingo-player-count").value, 10);
@@ -2738,6 +2751,8 @@
             option.classList.toggle("is-active", active);
             option.setAttribute("aria-pressed", String(active));
           });
+          $("bingo-mode-toggle").setAttribute("aria-expanded", "false");
+          $("bingo-mode-controls").hidden = true;
           renderBingo();
         });
       });
