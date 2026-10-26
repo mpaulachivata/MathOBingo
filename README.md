@@ -15,5 +15,6 @@ Gracias a mi mejor amiga y mi novio por ayudarme a revisar las preguntas y por q
 
 Pd. Me faltó contar que esto empezó como un proyecto interactivo de Canva. Se me acabaron los tokens del chat y me había dado cuenta de que era puro HTML, así que me puse como el goofy estudioso
 
-yo:  <img width=<img width="374" height="211" alt="goofy-studying" src="https://github.com/user-attachments/assets/fb2ac1a2-3608-4a21-bf45-903a8e42c0da" />
+yo:   <img width="374" height="211" alt="goofy-studying" src="https://github.com/user-attachments/assets/fb2ac1a2-3608-4a21-bf45-903a8e42c0da" />
+
 y saqué la página adelante para la actividad en la jornada y que todos la pasaran bien.
